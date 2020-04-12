@@ -17,8 +17,9 @@ mixer.music.load("background.wav")
 # mixer.music.play(-1) 
 
 
-# everything happends in the game are events
+# everything happends in the game are based on events
 # Title and Icon
+# load pic to a variable (icon) and apply it (pygame.display.set_icon(icon))
 pygame.display.set_caption("Space Invaders")
 icon = pygame.image.load("Title_icon.png")
 pygame.display.set_icon(icon)
@@ -27,8 +28,8 @@ pygame.display.set_icon(icon)
 playerImg = pygame.image.load("player_icon.png")
 playerX = 370
 playerY = 480
-playerX_delta = 0
-playerX_speed = 2
+playerX_delta = 0  # delta_X in each loop
+playerX_speed = 2  # delta_X (speed) constant
 
 class enemy():
     
@@ -38,7 +39,7 @@ class enemy():
         self.Y = random.randint(10,200)
         self.X_delta = enemy_speed_x
         self.Y_delta = enemy_speed_y
-        self.lb =1
+        self.lb = 1
         self.ub = 734
     def show(self):
         screen.blit(self.Img,(self.X,self.Y))
@@ -51,7 +52,7 @@ class enemy():
     def Ymove(self):
         self.Y += self.Y_delta
 
-
+# enemy 1 
 vx = 1
 vy = 2
 e1 = enemy(vx,vy)
