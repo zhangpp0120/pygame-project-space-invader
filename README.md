@@ -1,2 +1,2 @@
-# zhangpp0120-gmail.com
+# pygame-project-space-invader
 space-invader-pygame-project
